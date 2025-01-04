@@ -67,7 +67,7 @@ export function AppSidebar() {
         AI Shorts Generator
       </SidebarHeader>
       <SidebarSeparator />
-      <SidebarContent>
+      <SidebarContent className="py-5">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
