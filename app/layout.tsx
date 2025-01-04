@@ -1,6 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
-import Provider from "./provider";
 import { Outfit } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 const outfit = Outfit({ subsets: ["latin"] });
@@ -19,7 +18,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Provider>{children}</Provider>
+            {children}
           </ThemeProvider>
         </body>
       </html>

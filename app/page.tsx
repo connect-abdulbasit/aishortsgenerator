@@ -1,6 +1,6 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { SignInButton, useAuth } from "@clerk/nextjs";
+import { ProgressDemo } from "@/components/ui/progress-bar";
+import { useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
@@ -13,16 +13,10 @@ export default function Home() {
       router.push("/dashboard");
     }
   }, [userId, router]);
-
+  router.push("/sign-in");
   return (
     <>
-      <div className="flex m-10">
-        (
-        <SignInButton>
-          <Button>Sign In</Button>
-        </SignInButton>
-        )
-      </div>
+      <ProgressDemo />
     </>
   );
 }
