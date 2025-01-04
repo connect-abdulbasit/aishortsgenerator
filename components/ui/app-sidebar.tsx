@@ -6,7 +6,6 @@ import {
   Inbox,
   Search,
   Settings,
-  User2,
 } from "lucide-react";
 import {
   Sidebar,
@@ -26,7 +25,7 @@ import {
   DropdownMenu,
   // DropdownMenuContent,
   // DropdownMenuItem,
-  DropdownMenuTrigger,
+  // DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 
 // Menu items.
@@ -99,12 +98,12 @@ export function AppSidebar() {
           <div className="flex flex-col">
             <span className="font-bold">
               <DropdownMenu>
-                <DropdownMenuTrigger>
-                  <SidebarMenuButton>
-                    <User2 /> {user?.fullName}
-                    {/* <ChevronUp className="ml-auto" /> */}
-                  </SidebarMenuButton>
-                </DropdownMenuTrigger>
+                {/* <DropdownMenuTrigger> */}
+                <SidebarMenuButton>
+                  {user?.fullName}
+                  {/* <ChevronUp className="ml-auto" /> */}
+                </SidebarMenuButton>
+                {/* </DropdownMenuTrigger> */}
                 {/* <DropdownMenuContent side="top">
                   <DropdownMenuItem>
                     <span>Sign out</span>
