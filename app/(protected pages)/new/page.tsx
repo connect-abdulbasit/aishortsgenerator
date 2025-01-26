@@ -26,7 +26,7 @@ const Page = () => {
       setSubmitting(true);
       const prompt = `Write a short video on topic ${formData.content} with ${formData.style} style and duration in ${formData.duration} seconds video format with imagePrompt and contentText as field names\n`;
       try {
-        const response = await fetch("/api/create-script", {
+        const response = await fetch("/api/create-video", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
