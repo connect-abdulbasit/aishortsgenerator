@@ -24,7 +24,7 @@ const Page = () => {
   const handleSubmit = async () => {
     if (formData.content && formData.style && formData.duration) {
       setSubmitting(true);
-      const prompt = `Write a short video on topic ${formData.content} with ${formData.style} style and duration in ${formData.duration} seconds video format with imagePrompt and contentText as field names\n`;
+      const prompt = `Write a short video on topic ${formData.content} with ${formData.style} style and duration should be between ${Number(formData.duration)-20} seconds video but not more than ${Number(formData.duration)+20} seconds video format with imagePrompt and contentText as field names\n`;
       try {
         const response = await fetch("/api/create-video", {
           method: "POST",
