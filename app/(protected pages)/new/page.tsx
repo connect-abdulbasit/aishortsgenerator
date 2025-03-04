@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Content from "@/components/ui/content";
 import Duration from "@/components/ui/duration";
 import Style from "@/components/ui/style";
-import { Loader2 } from "lucide-react";
+// import { Loader2 } from "lucide-react";
 import React, { useState } from "react";
 import { toast } from "sonner";
 
@@ -24,7 +24,7 @@ const Page = () => {
   const handleSubmit = async () => {
     if (formData.content && formData.style && formData.duration) {
       setSubmitting(true);
-      const prompt = `Write a short video on topic ${formData.content} with ${formData.style} style and duration should be between ${Number(formData.duration)-20} seconds video but not more than ${Number(formData.duration)+20} seconds video format with imagePrompt and contentText as field names\n`;
+      const prompt = `Write a short video on topic ${formData.content} with ${formData.style} style and duration should be between ${Number(formData.duration) - 20} seconds video but not more than ${Number(formData.duration) + 20} seconds video format with imagePrompt and contentText as field names\n`;
       try {
         const response = await fetch("/api/create-video", {
           method: "POST",
@@ -60,7 +60,7 @@ const Page = () => {
         {/* Submit Button */}
         <div className="mx-10 px-10 flex justify-end">
           <Button onClick={handleSubmit} disabled={submitting}>
-            {submitting && <Loader2 className="animate-spin" />}
+            {/* {submitting && <Loader2 className="animate-spin" />} */}
             Submit
           </Button>
         </div>

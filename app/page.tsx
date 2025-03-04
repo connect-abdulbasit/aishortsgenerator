@@ -7,7 +7,7 @@ import React, { useEffect } from "react";
 export default function Home() {
   const { userId } = useAuth();
   const router = useRouter();
-
+  console.log("122222222222222222222")
   useEffect(() => {
     if (userId) {
       router.push("/dashboard");
