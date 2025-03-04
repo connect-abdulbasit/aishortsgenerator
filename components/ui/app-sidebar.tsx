@@ -1,10 +1,10 @@
 "use client";
 import {
-  Calendar,
+  // Calendar,
   // ChevronUp,
   Home,
   Inbox,
-  Search,
+  // Search,
   Settings,
 } from "lucide-react";
 import {
