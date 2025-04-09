@@ -1,1 +1,1 @@
-# AI Shorts Generator
+# AI Shorts Generator Web App
